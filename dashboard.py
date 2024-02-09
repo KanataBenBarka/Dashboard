@@ -69,10 +69,8 @@ dict_cat ={ 'Situation familiale' : ['NAME_FAMILY_STATUS', 'Répartition Situati
 @st.cache_data(persist = True)
 def data_load():
     ## Fonction de chargement et fusion des données
-    df_test= pd.read_csv('Data/test_dash.csv',index_col='SK_ID_CURR')
-    #, index_col = 'Unnamed: 0')
-    df_comp= pd.read_csv('Data/comp_dash.csv',index_col='SK_ID_CURR')
-    #, index_col = 'Unnamed: 0')
+    df_test= pd.read_csv('Data/test_dash.csv',index_col = 'Unnamed: 0')
+    df_comp= pd.read_csv('Data/comp_dash.csv',index_col = 'Unnamed: 0')
     return df_test, df_comp
   
 @st.cache_resource()
